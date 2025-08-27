@@ -3,8 +3,6 @@ for(let callBtn of callBtns){
     callBtn.addEventListener('click', function(){
         const subTitle = callBtn.parentNode.parentNode.childNodes[3].childNodes[1].innerText
         const number = callBtn.parentNode.parentNode.childNodes[5].childNodes[1].innerText
-        console.log(subTitle)
-        console.log(number)
 
         const coins = document.getElementById('coins').innerText
         let newCoins = Number(coins)
@@ -36,6 +34,19 @@ for(let callBtn of callBtns){
         clearBtn.addEventListener('click', function(){
             historyContainer.innerText = ""
         })
+    })
+}
+
+const copyBtns = document.getElementsByClassName('copy')
+for(let copyBtn of copyBtns){
+    copyBtn.addEventListener('click', function(){
+        const number = copyBtn.parentNode.parentNode.childNodes[5].childNodes[1].innerText
+        navigator.clipboard.writeText(number)
+        const copyContainer = document.getElementById('copy-container').innerText
+        let copyCount = Number(copyContainer)
+        copyCount++
+        document.getElementById('copy-container').innerText = copyCount
+
     })
 }
 
