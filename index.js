@@ -51,12 +51,13 @@ for(let copyBtn of copyBtns){
 }
 
 const hearts = document.getElementsByClassName('heart')
+
 for(let heart of hearts){
+
     heart.addEventListener('click', function(){
         const count = document.getElementById('heart-count').innerText
         let heartCount = Number(count)
         heartCount++;
         document.getElementById('heart-count').innerText = heartCount
-
     })
 }
