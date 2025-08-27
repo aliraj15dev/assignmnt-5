@@ -43,6 +43,7 @@ for(let copyBtn of copyBtns){
         const number = copyBtn.parentNode.parentNode.childNodes[5].childNodes[1].innerText
         navigator.clipboard.writeText(number)
         const copyContainer = document.getElementById('copy-container').innerText
+        alert('Your callimg number'+' '+number+' '+"is copied")
         let copyCount = Number(copyContainer)
         copyCount++
         document.getElementById('copy-container').innerText = copyCount
