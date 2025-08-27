@@ -28,7 +28,7 @@ for(let callBtn of callBtns){
               <p>${time}</p>
         </div>
         `
-        historyContainer.append(history)
+        historyContainer.prepend(history)
 
         const clearBtn = document.getElementById('clear')
         clearBtn.addEventListener('click', function(){
@@ -50,8 +50,8 @@ for(let copyBtn of copyBtns){
     })
 }
 
-const hearts = document.getElementsByClassName('heart')
 
+const hearts = document.getElementsByClassName('heart')
 for(let heart of hearts){
 
     heart.addEventListener('click', function(){
