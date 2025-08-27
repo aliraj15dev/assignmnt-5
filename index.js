@@ -8,12 +8,12 @@ for(let callBtn of callBtns){
         let newCoins = Number(coins)
 
         if(newCoins<20){
-            alert('Earn Coint and then Call')
+            alert('❌ Not available coins, must 20 coins to call')
             return;
         }
         newCoins-=20;
 
-        alert(`Calling to ${subTitle} ${number}...`)
+        alert(`📞 Calling to ${subTitle} ${number}...`)
         document.getElementById('coins').innerText = newCoins
 
         const historyContainer = document.getElementById('history-container')
@@ -43,7 +43,7 @@ for(let copyBtn of copyBtns){
         const number = copyBtn.parentNode.parentNode.childNodes[5].childNodes[1].innerText
         navigator.clipboard.writeText(number)
         const copyContainer = document.getElementById('copy-container').innerText
-        alert('Your callimg number'+' '+number+' '+"is copied")
+        alert('Your calling number'+' '+number+' '+"is copied")
         let copyCount = Number(copyContainer)
         copyCount++
         document.getElementById('copy-container').innerText = copyCount
